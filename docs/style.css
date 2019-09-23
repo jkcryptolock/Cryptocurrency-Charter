@@ -1,0 +1,14 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#app {
+    text-align: center;
+}
+
+#chart-container {
+    display: inline-block;
+    height: 400px;
+    width: 600px;
+}
