@@ -1,0 +1,19 @@
+{
+  "name": "cryptochart",
+  "version": "1.0.0",
+  "description": "Cryptocurrency Charting Tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkcryptolock/Cryptocurrency-Charter.git"
+  },
+  "author": "jkcryptolock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkcryptolock/Cryptocurrency-Charter/issues"
+  },
+  "homepage": "https://github.com/jkcryptolock/Cryptocurrency-Charter#readme"
+}
