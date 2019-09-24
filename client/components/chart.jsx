@@ -6,7 +6,7 @@ const ChartDisplay = (props) => {
     return (
         <div className="body">
             <div id="chart-container">
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <canvas id="myChart" width="1500" height="600"></canvas>
                 <Typography>
                 Powered by CoinDesk
                 </Typography>

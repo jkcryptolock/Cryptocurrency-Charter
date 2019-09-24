@@ -39,6 +39,7 @@ const TimeSelector = (props) => {
             <BottomNavigationAction label="2013" onClick={() => selectTime('2013-01-01', '2013-12-31')} icon={<RestoreIcon />} />
             <BottomNavigationAction label="2012" onClick={() => selectTime('2012-01-01', '2012-12-31')} icon={<RestoreIcon />} />
             <BottomNavigationAction label="2011" onClick={() => selectTime('2011-01-01', '2011-12-31')} icon={<RestoreIcon />} />
+            <BottomNavigationAction label="All Time" onClick={() => selectTime('2011-01-01', '2019-12-31')} icon={<RestoreIcon />} />
             </BottomNavigation>
         </div>
       </div>
