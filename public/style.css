@@ -3,12 +3,20 @@ body {
     margin: 0px;
 }
 
-#app {
+.body {
     text-align: center;
 }
 
 #chart-container {
     display: inline-block;
+    margin-top: 10px;
     height: 400px;
     width: 600px;
 }
+
+#bottom-container {
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+

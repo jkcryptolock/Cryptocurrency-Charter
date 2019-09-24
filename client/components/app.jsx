@@ -3,6 +3,7 @@ import axios from 'axios';
 import Chart from 'chart.js';
 import ButtonAppBar from './appbar.jsx';
 import ChartDisplay from './chart.jsx';
+import TimeSelector from './bottom.jsx';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -11,41 +12,70 @@ export default class App extends React.Component {
         this.state = {
             data: [],
             prices: [],
-            dates: []
+            dates: [],
+            currency: 'USD',
+            start: '',
+            end: ''
         };
 
     }
 
-    componentDidMount() {
-        axios.get('https://api.coindesk.com/v1/bpi/historical/close.json')
-            .then(data => {
-                let summary = data.data.bpi;
-                let prices = [], dates = [];
+    loadData(currency, start, end) {
+        let url;
 
-                for (let key in summary) {
-                    prices.push(summary[key]);
-                    dates.push(key);
-                }
+        if (!start || !end) {
+            url = `https://api.coindesk.com/v1/bpi/historical/close.json?currency=${currency}`;
+        } else {
+            url = `https://api.coindesk.com/v1/bpi/historical/close.json?currency=${currency}&start=${start}&end=${end}`;
+        }
 
-                this.setState( { data: summary,
-                                 prices: prices,
-                                 dates: dates });
-                
-                this.generateChart(dates, prices);
-            })
-            .catch(err =>
-                console.log(err)
-            );
+        axios.get(url)
+        .then(data => {
+            let summary = data.data.bpi;
+            let prices = [], dates = [];
+
+            for (let key in summary) {
+                prices.push(summary[key]);
+                dates.push(key);
+            }
+
+            this.setState( { data: summary,
+                             prices: prices,
+                             dates: dates,
+                             currency: currency,
+                             start: (start || ''),
+                             end: (end || '') 
+                            });
+            
+            this.generateChart(dates, prices, currency);
+
+        })
+        .catch(err =>
+            console.log(err)
+        );
     }
 
-    generateChart(dates, prices) {
+    changeCurrency(currency) {
+        this.loadData(currency, this.state.start, this.state.end);
+    }
+
+    changeTimeframe(start, end) {
+        this.loadData(this.state.currency, start, end);
+    }
+
+    componentDidMount() {
+        this.loadData('USD');
+    }
+
+    generateChart(dates, prices, currency) {
+        document.getElementById('myChart').innerHTML = "";
         let ctx = document.getElementById('myChart');
         let myChart = new Chart(ctx, {
             type: 'line',
             data: {
                 labels: dates,
                 datasets: [{
-                    label: 'Bitcoin Price in USD',
+                    label: `Bitcoin Price in ${currency}`,
                     data: prices,
                     fill: false,
                     borderColor: 'rgba(250, 0, 0, .6)'
@@ -60,9 +90,9 @@ export default class App extends React.Component {
                     }]
                 },
                 title: {
-                    display: true,
-                    fontSize: 36,
-                    text: 'Bitcoin Price in USD - Past 30 Days'
+                    display: false,
+                    fontSize: 24,
+                    text: 'Past 30 Days'
                 }
             }
         });
@@ -71,8 +101,9 @@ export default class App extends React.Component {
     render() {
         return (
             <>
-            <ButtonAppBar />
+            <ButtonAppBar changeCurrency={this.changeCurrency.bind(this)} />
             <ChartDisplay />
+            <TimeSelector changeTimeframe={this.changeTimeframe.bind(this)} />
             </>
         )
     }
