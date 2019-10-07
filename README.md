@@ -4,6 +4,8 @@ Cryptocurrency Charter is a one-day project built to utilize the Coindesk API fo
 
 ## View
 
+<a href='https://jkcryptolock.github.io/Cryptocurrency-Charter/public/index.html'>Github.io Link</a>
+
 
 ## Implemented:
 - As a user, I want to see bitcoin prices for the last 30 days.
