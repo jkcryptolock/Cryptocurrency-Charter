@@ -20,25 +20,15 @@ Cryptocurrency Charter is a one-day project built to utilize the Coindesk API fo
   <tr>
     <td align="center">Front-end</td>
     <td align="center">Deployment</td>
-    <td align="center">APs</td>
+    <td align="center">APIs</td>
   </tr>
   <tr>
     <td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png" alt="React" title="React" width="80px"/></td>
+    <td align="center"><img src="https://banner2.kisspng.com/20180512/gle/kisspng-github-pages-logo-computer-icons-5af70e19834367.5091665315261404415377.jpg" alt="Github.io" title="Github.io" width="60px"/></td>
+    <td align="center"><img src="https://ik.imagekit.io/imageopti/wp-content/uploads/thumbs_dir/Coindesk-Logo-nzioet8v1l246v5f0ik2nrk41zfpofkj6m4vev5pqg.png" alt="CoinDesk" title="Coindesk" width="80px"/></td>
+  </tr>
+  <tr> 
     <td align="center"><img src="https://cdn.worldvectorlogo.com/logos/material-ui.svg" alt="React" title="React" width="80px"/></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="https://cdn.worldvectorlogo.com/logos/react-router.svg" alt="React Router" title="React Router" width="70px"/></td>
-    <td align="center"><img src="https://buttercms.com/static/images/tech_banners/ExpressJS.png" alt="Express" title="Express" width="60px"/></td>
-    <td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png" alt="AWS" title="AWS" width="60px"/></td>
-    <td align="center"><img src="https://avatars0.githubusercontent.com/u/42357678?v=4" alt="Firebase Authentication" title="Firebase Authentication" width="60px"/></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" alt="Redux" title="Redux" width="60px"/></td>
-    <td align="center"><img src="https://www.elearningworld.org/wp-content/uploads/2019/04/MySQL.svg.png" alt="MySQL" title="MySQL" width="60px"/></td>
-    <td align="center"><img src="https://www.nginx.com/wp-content/uploads/2018/08/NGINX-logo-rgb-large.png" alt="Nginx" title="Nginx" width="60px"/></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grommet-icon.svg/1024px-Grommet-icon.svg.png" alt="Grommet" title="Grommet" width="60px"/></td>
   </tr>
 </table>
 
